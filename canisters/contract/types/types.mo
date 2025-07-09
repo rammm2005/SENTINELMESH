@@ -1,0 +1,3 @@
+module {
+    // register global type
+};

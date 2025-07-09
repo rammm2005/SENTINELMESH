@@ -1,0 +1,30 @@
+type User = 
+ record {
+   "principal": principal;
+   username: text;
+ };
+type Threat = 
+ record {
+   description: text;
+   nodeId: text;
+   reporter: principal;
+ };
+type Node = 
+ record {
+   id: text;
+   ip: text;
+   owner: principal;
+   status: text;
+ };
+service : {
+  deregisterNode: (id: text) -> (text);
+  getAudit: () -> (vec text) query;
+  getThreats: () -> (vec Threat) query;
+  hello: () -> (text) query;
+  listNodes: () -> (vec Node) query;
+  listUsers: () -> (vec User) query;
+  registerNode: (id: text, ip: text) -> (text);
+  registerUser: (username: text) -> (text);
+  reportThreat: (nodeId: text, desc: text) -> (text);
+  updateNodeStatus: (id: text, status: text) -> (text);
+}

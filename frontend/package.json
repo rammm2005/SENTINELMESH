@@ -14,9 +14,11 @@
     "@dfinity/auth-client": "^0.17.0",
     "@dfinity/candid": "^0.17.0",
     "@dfinity/principal": "^0.17.0",
+    "@tailwindcss/vite": "^4.1.11",
     "dotenv": "^17.1.0",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.11"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",
